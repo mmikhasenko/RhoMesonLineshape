@@ -1,0 +1,4 @@
+name = "RhoMesonLineshape1"
+uuid = "eba0b99b-2b5e-40f4-baa4-dd71cd54856b"
+authors = ["Misha Mikhasenko <mikhail.mikhasenko@gmail.com>"]
+version = "0.1.0"

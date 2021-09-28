@@ -234,7 +234,7 @@ sqrt(5.99)
 
 # ╔═╡ 711f4b8a-4c8a-40af-92f1-358c16810208
 begin
-	covellipse(mean_cov(constwidth_pole_sample)..., n_std=sqrt(5.99))
+	covellipse(mean_cov(constwidth_pole_sample)..., n_std=sqrt(5.99), lab="95%")
 	scatter!(constwidth_pole_sample)
 end
 
@@ -1430,7 +1430,7 @@ version = "0.9.1+5"
 # ╠═a31049d1-1e00-467c-ab88-d962aeedf39c
 # ╟─172cdc6a-da01-4ec9-9a4e-3745daa2b395
 # ╟─d1b102fe-5fd2-4cbb-8693-62d6d7592aca
-# ╠═58544602-82cd-40f4-814e-1110ac5c3317
+# ╟─58544602-82cd-40f4-814e-1110ac5c3317
 # ╠═fcd57127-a3fd-41c5-97f3-5507f073a130
 # ╠═0baea909-d9cb-4085-b279-a09165c9ffa4
 # ╟─ca05efed-ac4c-46ca-a7a1-32d0dd92b269
@@ -1446,7 +1446,7 @@ version = "0.9.1+5"
 # ╠═db7f7e74-64dc-424a-9050-bc9a9bedf1dd
 # ╠═53987009-0c15-4599-926b-bd63327238f1
 # ╠═0e546994-a723-47ed-8e23-b1cb4ffa974b
-# ╠═1e909823-2e65-48b7-a0c1-7942ec120e75
+# ╟─1e909823-2e65-48b7-a0c1-7942ec120e75
 # ╠═50c2d60b-931a-4cd7-9f2a-0bb40c37e305
 # ╠═8dc23168-b1af-4804-9a53-34e7db2aa0e5
 # ╟─5e77bf50-7e12-4590-91fc-0c2ab3b742d5
