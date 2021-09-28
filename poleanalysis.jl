@@ -132,7 +132,7 @@ begin
 		Γ::T
 	end
 	function amplitude(l::depwidthapprox, e)
-		depfactor = phasespace(e) / phasespace(l.m)
+		depfactor = phasespace(e)^5 / phasespace(l.m)^5
 		Γ = l.Γ * depfactor
 		1/(l.m^2-e^2-1im*l.m*Γ)
 	end
