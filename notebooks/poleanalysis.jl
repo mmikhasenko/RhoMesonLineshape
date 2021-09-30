@@ -226,22 +226,19 @@ function mean_cov(sample)
 	mean.([x,y]), [cov(i,j) for i in [x,y], j in [x,y]]
 end
 
-# ╔═╡ 0b25b882-7a70-49e3-addd-ad6d8b1fc65c
-
-
-# ╔═╡ 42edeaff-9a3a-4e8e-870e-309ee0fb10ad
-sqrt(5.99)
+# ╔═╡ 1c8b05ab-8829-4250-b4ab-c91cab872ed5
+const chi2_95 = 5.99
 
 # ╔═╡ 711f4b8a-4c8a-40af-92f1-358c16810208
 begin
-	covellipse(mean_cov(constwidth_pole_sample)..., n_std=sqrt(5.99), lab="95%")
+	covellipse(mean_cov(constwidth_pole_sample)..., n_std=sqrt(chi2_95), lab="95%")
 	scatter!(constwidth_pole_sample)
 end
 
 # ╔═╡ 351b4220-72ab-48dc-9709-19d72a15167c
 begin
-	covellipse( mean_cov(constwidth_pole_sample)..., n_std=sqrt(5.99))
-	covellipse!(mean_cov(depwidth_pole_sample)..., n_std=sqrt(5.99))
+	covellipse( mean_cov(constwidth_pole_sample)..., n_std=sqrt(chi2_95))
+	covellipse!(mean_cov(depwidth_pole_sample)..., n_std=sqrt(chi2_95))
 end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
@@ -1463,8 +1460,7 @@ version = "0.9.1+5"
 # ╠═16ba5d90-9deb-4dc5-b3d1-b31d59da1d91
 # ╠═1e37f794-6621-4955-b2af-f99303036b95
 # ╠═6e765e5f-fbc9-4f8a-bf7c-b93c0341ecf8
-# ╠═0b25b882-7a70-49e3-addd-ad6d8b1fc65c
-# ╠═42edeaff-9a3a-4e8e-870e-309ee0fb10ad
+# ╠═1c8b05ab-8829-4250-b4ab-c91cab872ed5
 # ╠═711f4b8a-4c8a-40af-92f1-358c16810208
 # ╠═351b4220-72ab-48dc-9709-19d72a15167c
 # ╟─00000000-0000-0000-0000-000000000001
