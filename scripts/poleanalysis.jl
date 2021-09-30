@@ -1,3 +1,6 @@
+using Pkg
+cd(joinpath(@__DIR__,".."))
+Pkg.activate(".")
 
 using RhoMesonLineshape # my project
 
@@ -8,10 +11,14 @@ using RhoMesonLineshape # my project
 ##    _|_|_|    _|_|      _|_|_|    _|_|_|  
 
 # construct models
-a0 = constwidthappr(mρ_pdg.val, Γρ_pdg.val)
-a1 = depwidthapprox(mρ_pdg.val, Γρ_pdg.val)
+a1 = constwidthappr(mρ_pdg.val, Γρ_pdg.val)
+a2 = depwidthapprox(mρ_pdg.val, Γρ_pdg.val)
 
 # analysis the pole
+
+val1 = pole_search(a1)
+val2 = pole_search(a2)
+
 const Nbootstrap = 1000
 
 constwidth_pole_sample = [pole_search(constwidthappr(
@@ -29,9 +36,11 @@ mean_cov2 = mean_cov(depwidth_pole_sample)
 writejson(joinpath("results","poleanalysis.json"),
     Dict(
         :model1pars => Dict(
+            :nom => val1,
             :mean => mean_cov1[1],
             :cov  => mean_cov1[2]),
         :model2pars => Dict(
+            :nom => val2,
             :mean => mean_cov2[1],
             :cov  => mean_cov2[2])
     ))
